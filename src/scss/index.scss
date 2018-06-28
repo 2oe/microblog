@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html,body,.wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    header{
+        width: 100%;
+        height: 54px;
+        border-bottom: 10px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        flex-shrink: 0;
+        >span{
+            width:40%;
+            img{
+                width: 70%;
+            }
+        }
+    }
+    .con{
+        width: 100%;
+        height: 54px;
+        flex-shrink: 0;
+        border-bottom: 10px solid #eee;
+        .tab_list{
+            width: 120px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            .tab_item{
+                flex: 1;
+                line-height: 44px;
+            }
+            .active{
+                color:blue;
+                border-bottom: 2px solid blue;
+            }
+        }
+    }
+    section{
+        width: 100%;
+        flex: 1;
+        overflow: hidden;
+        background: #eee;
+        .listCon,.listSlide,.listWrap{
+            width: 100%;
+            height: 100%;
+            .show{
+                width: 100%;
+                li{
+                    width: 100%;
+                    background: #fff;
+                    border-bottom: 10px solid #eee;
+                    dl{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 15px;
+                        img{
+                            width: 44px;
+                            height: 44px;
+                        }
+                        dd{
+                            padding-left: 10px;
+                        }
+                    }
+                    >h4,p{
+                        line-height: 1.6;
+                        padding: 0 15px;
+                    }
+                    >p{
+                        padding-right: 20px;
+                    }
+                    >img{
+                        width: 60%;
+                        padding: 10px 15px;
+                    }
+                    .operate{
+                        width: 100%;
+                        display: flex;
+                        height: 44px;
+                        align-items: center;
+                        border-top: 1px solid #ccc;
+                        >div{
+                            flex:1;
+                            text-align: center;
+                            &:nth-child(1){
+                                border-right: 1px  solid #ccc;
+                            }
+                        }
+                        .like{
+                            background: url(../img/icon-like.png) no-repeat 40% center;
+                            background-size: 22px;
+                        }
+                        .active{
+                            color: red;
+                        }
+                        .discuss{
+                            background: url(../img/icon-discuss.png) no-repeat 32% center;
+                            background-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        .listSlide{
+            overflow-y: auto;
+        }
+    }
+    .mark{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: none;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,.5);
+        .form{
+            width: 80%;
+            height:180px;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%,-50%,0);
+            span{
+                margin: 10px;
+            }
+            input{
+                display: block;
+                width: 80%;
+                height: 35px;
+                margin: 15px auto;
+                padding:0 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="js/libs/swiper-4.1.6.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <span><img src="img/icon-head.png" alt=""></span>
+            <div class="right">
+                <span class="login_btn">登录</span>
+                *
+                <span class="register_btn">注册</span>
+            </div>
+        </header>
+        <div class="con">
+            <div class="tab_list">
+                <div class="tab_item active">推荐</div>
+                <div class="tab_item">动态</div>
+            </div>
+        </div>
+        <section>
+            <div class="swiper-container listCon swiper-no-swiping">
+                <div class="swiper-wrapper listWrap">
+                    <div class="swiper-slide listSlide">
+                        <ul class="show">
+                            
+                        </ul>
+                    </div>
+                    <script type="text/x-handlebars-template" id="showTpl">
+                        {{#each this}}
+                            <li>
+                                <dl>
+                                    <dt><img src="{{portrait}}" alt=""></dt>
+                                    <dd>
+                                        <h4>{{name}}</h4>
+                                        <span>{{time}}</span>
+                                    </dd>
+                                </dl>
+                                <h4>{{tit}}</h4>
+                                <p>{{con}}</p>
+                                <img src="{{pic}}">
+                                <div class="operate">
+                                    <div class="like">{{num}}</div>
+                                    <div class="discuss">评论</div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </script>
+                    <div class="swiper-slide listSlide">2</div>
+                </div>
+            </div>
+        </section>
+        <div class="mark">
+            <div class="form">
+                <span class="back">X</span>
+                <input type="text" id="user" placeholder="用户名">
+                <input type="text" id="pwd" placeholder="密码">
+                <input type="button" value="登录" id="sub_btn">
+            </div>
+        </div>
+    </div>
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
+</body>
+</html>
